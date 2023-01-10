@@ -2,11 +2,11 @@ name: OpsSW and Tools Issue Template
 description: File a bug report for OpsSW and Tools
 title: "<REPLACE WITH ISSUE TITLE>"
 labels: ["bug"]
-projects: ["🏢 Ops Software and Tools"]
 body:
   - type: markdown
     attributes:
       value: |
+        Add "🏢 Ops Software and Tools" on Projects -->
         Please fill the fields below accordingly
   - type: textarea
     id: description
