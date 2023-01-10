@@ -1,6 +1,6 @@
-name: Bug Report
-description: File a bug report
-title: "[Bug]: "
+name: OpsSW and Tools Issue Template
+description: File a bug report for OpsSW and Tools
+title: "<REPLACE WITH ISSUE TITLE>"
 labels: ["bug", "triage"]
 assignees:
   - octocat
@@ -8,72 +8,25 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
-  - type: input
-    id: contact
+        Please fill the fields below accordingly
+  - type: textarea
+    id: description
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
+      label: Bug description
+      description: A description of what happened, how to reproduce, how it affects usage
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot of the bug
+      description: A screenshot or a video capture from the time the bug happened or after the event happaned, if relevant also a screenshot of the expected behavior, screenshot of the console/network tab at the time of the error
     validations:
       required: false
   - type: textarea
-    id: what-happened
+    id: Environment
     attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      label: Environment information
+      description: Link to the frontend where it happened that includes, Site, Location, Selected scan points etc., Additional system information like OS, browser, and the output of commands such as window.$3d.module.threeHelpers.getAllInformation
     validations:
       required: true
-  - type: dropdown
-    id: project
-    attributes:
-      label: Select Project
-      description: Choose the relevant project associated to the issue found
-      options:
-        - FE/JSE
-        - Native
-        - Registration
-        - Backend
-        - Unities
-        - OpsSW and Tools
-        - Colin
-    validations:
-      required: true
-  - type: checkboxes
-    id: choice
-    trigger:
-      action: show
-      field: project
-      condition: 'value[FE/JSE]'
-    attributes:
-      label: Did you choose FE/JSE
-      description: Say the truth
-      options:
-        - label: Yes
-        - label: No
-  - type: checkboxes
-    id: choice
-    trigger:
-      action: show
-      field: project
-      condition: 'value[Native]'
-    attributes:
-      label: Did you choose Native
-      description: Say the truth
-      options:
-        - label: Yes
-        - label: No
-  - type: checkboxes
-    id: choice
-    trigger:
-      action: show
-      field: project
-      condition: 'value[Registration]'
-    attributes:
-      label: Did you choose Registration
-      description: Say the truth
-      options:
-        - label: Yes
-        - label: No
