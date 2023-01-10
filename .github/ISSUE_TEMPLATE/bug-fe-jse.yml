@@ -23,22 +23,19 @@ body:
     attributes:
       label: Bug description
       description: A description of what happened, how to reproduce, how it affects usage
+      placeholder: |
+        #####Issue description:
+
+
+        #####How to reproduce:
+
+        #####Recording of the bug (drag file or add link):
+
+        #####Developer options screenshot
+        ###### Display all links under Developer Options under General Information (tap 7 times on the title) within Vera System Information 
     validations:
       required: true
-  - type: input
-    id: screenrecording
-    attributes:
-      label: Recording of the bug
-      description: A screenshot or a video capture from the time the bug happened or after the event happaned. It is not a must but will be highly appreciated 
-    validations:
-      required: false
-  - type: input
-    id: settings
-    attributes:
-      label: Developer options screenshot
-      description: Display all links under Developer Options under General Information (tap 7 times on the title) within Vera System Information 
-    validations:
-      required: true
+
   - type: textarea
     id: logs
     attributes:
