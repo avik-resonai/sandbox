@@ -1,34 +1,48 @@
-name: Issue Template - 🤳 Native App
-description: File a bug report for Native App
+name: Issue Template - Registration Tasks
+description: File a bug report for Registration Tasks
 title: "<ENTER ISSUE TITLE>"
-labels: ["bug","🤳 Native App"]
+labels: ["bug","Registration Tasks"]
 body:
   - type: markdown
     attributes:
       value: |
-        Manually add "🤳 Native App" on Projects -->
+        Manually add "Registration Tasks" on Projects -->
 
-        [### Check this is NOT a DUPLICATE ###](https://github.com/orgs/resonai/projects/4)
-        
+        [### Check this is NOT a DUPLICATE ###](https://github.com/orgs/resonai/projects/14)
+
         Please fill the fields below accordingly
-  - type: textarea
-    id: description
+  - type: dropdown
+    id: env
     attributes:
-      label: Bug description
-      description: A description of what happened, how to reproduce, how it affects usage
-      value: |
-        --------
-        [Description of the issue]:
-
-        --------
-        [How to Reproduce]:
-        1.
-        2.
-        3.
-        ....
-
-        --------
-        [Screenshot / Recording]:
-        (Drag & drop media in OR enter link)
+      label: Enviroment
+      description: Enviroment where issue was reproduced
+      multiple: true
+      options:
+        - Prod
+        - Beta
+        - Staging (Demo)
+        - Dev
+        - Local / Other
+    validations:
+      required: true
+  - type: input
+    id: realestate
+    attributes:
+      label: Realestate
+      description: LINK to Realestate / Site where the issue occurred
+    validations:
+      required: false
+  - type: textarea
+    id: details
+    attributes:
+      label: Bad Registration instances -> DeviceID + Time of Occurrence (± 3 minutes)
+      description: Enter device ID from Vera settings -> Show System Information AND time when you realized registration was not well.
+      value:
+        1. DeviceID-> 
+          Bad Regi Times-> XX:XX, YY:YY, ...
+        2. DeviceID-> 
+          Bad Regi Times-> XX:XX, YY:YY, ... 
+        3. DeviceID-> 
+          Bad Regi Times-> XX:XX, YY:YY, ... 
     validations:
       required: true
