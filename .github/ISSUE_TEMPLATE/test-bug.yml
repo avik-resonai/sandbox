@@ -37,11 +37,13 @@ body:
     attributes:
       label: Bad Registration instances -> DeviceID + Time of Occurrence (± 3 minutes)
       description: Enter device ID from Vera settings -> Show System Information AND time when you realized registration was not well.
-      value:
+      value: |
         1. DeviceID-> 
           Bad Regi Times-> XX:XX, YY:YY, ...
+        -------  
         2. DeviceID-> 
           Bad Regi Times-> XX:XX, YY:YY, ... 
+        -------  
         3. DeviceID-> 
           Bad Regi Times-> XX:XX, YY:YY, ... 
     validations:
