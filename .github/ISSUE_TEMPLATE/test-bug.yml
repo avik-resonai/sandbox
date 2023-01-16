@@ -19,14 +19,12 @@ body:
       value: |
         [Issue details and effects]:
 
-        --------
         [How to Reproduce]:
         1.
         2.
         3.
-        ....
+        ...
 
-        --------
         [Screenshot / Recording]:
         (Drag & drop media in OR enter link)
     validations:
