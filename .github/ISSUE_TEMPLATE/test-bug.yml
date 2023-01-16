@@ -17,6 +17,7 @@ body:
       label: Bug description
       description: A description of what happened, how to reproduce, how it affects usage
       value: |
+        --------
         [Description of the issue]:
 
         --------
@@ -29,31 +30,5 @@ body:
         --------
         [Screenshot / Recording]:
         (Drag & drop media in OR enter link)
-    validations:
-      required: true
-  - type: dropdown
-    id: env
-    attributes:
-      label: Operating system
-      description: OS where the issues was experienced on
-      multiple: true
-      options:
-        - Android
-        - iOS
-    validations:
-      required: true
-  - type: input
-    id: crashlytics
-    attributes:
-      label: Crashlytics / crash report
-      description: Link to the report
-    validations:
-      required: false
-  - type: textarea
-    id: settings
-    attributes:
-      label: Settings screenshot
-      description: Show System Information under Vera settings 
-      placeholder: Drag file here or add screenshot link
     validations:
       required: true
