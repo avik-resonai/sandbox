@@ -1,6 +1,5 @@
 name: Regression Template  - FE / Native
 description: Test Plan for FE / Native regression
-title: "FE/Native Regression: <Enter Version>"
 body:
   - type: markdown
     attributes:
