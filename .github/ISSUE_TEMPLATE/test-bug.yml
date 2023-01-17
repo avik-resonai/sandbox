@@ -1,5 +1,6 @@
 name: Regression Template  - FE / Native
 description: Test Plan for FE / Native regression
+title: "[FE / Native Regression]: "
 body:
   - type: markdown
     attributes:
@@ -7,43 +8,89 @@ body:
        ##### ENTER TITLE AND PROJECT ONLY #####
        the rest of the template should 
 
-       Add /Remove / Edit tests before opening the test plan only if you're certain they are not relevant anymore.
+       Add / Remove / Edit tests before opening the test plan only if you're certain they are not relevant anymore.
 
   - type: textarea
     id: MMS
     attributes:
       label: MMS tests
-      description: Tests required that relate to MMS functionality
+      description: Add / Remove / Edit tests only if you're sure of what you're doing
       value: |
-       - [ ] Open the (MMS dashboard from the office WIFI)[https://mms.optmoskva.ru/#/admin/dashboard?taskTypeFilter=all]
+       - [ ] Open the [MMS dashboard from the office WIFI](https://mms.optmoskva.ru/#/admin/dashboard?taskTypeFilter=all)
        - [ ] Insert the following ID card `U-000489724`
        - [ ] Delete current owner and yours to display new QR code
        - [ ] Open app with TCM and scan QR code 
        - [ ] Follow either open/close flows until the end
-       - [ ] Rinse and repeat on another OS (Android / iOS)
+       - [ ] (ONLY IF TESTING FE) Rinse and repeat on another OS (Android / iOS)
        -------
     validations:
-      required: true
+      required: false
   - type: textarea
     id: tutorial
     attributes:
-      label: hold
-      description: hold
+      label: Tutorial screens
+      description: Add / Remove / Edit tests only if you're sure of what you're doing 
       value: |
-       - [ ] DUMMY
+       - [ ] Clear storage data to get 1st time tutorial
+       - [ ] Iterate all the 3 screens-> "Hold your phone" / "Help us find your location" / "Look for the various experiences"
+       - [ ] Clear storage data to get 1st time tutorial
+       - [ ] Skip button skip all 3 tutorial screens
+
        -------
     validations:
-      required: true
+      required: false
+  - type: textarea
+    id: offline
+    attributes:
+      label: Offline screens
+      description: Add / Remove / Edit tests only if you're sure of what you're doing 
+      value: |
+       - [ ] Open app on Airplane mode before FE loads - Native offline screen
+       - [ ] Open app on Airplane mode before FE loads - IFE offline screen
+       - [ ] Throttle network speed while using app - Slow network screen
+       - [ ] Block network speed while using app - Network error screen
+
+       -------
+    validations:
+      required: false
+  - type: textarea
+    id: settings
+    attributes:
+      label: Settings screen
+      description: Add / Remove / Edit tests only if you're sure of what you're doing 
+      value: |
+       - [ ] Localization reset button -> Shows modal, reset triggers PLA
+       - [ ] Settings button -> Shows Language, Site, Group
+       - [ ] Change language to RTL / LTR
+       - [ ] Tap on "Show Systems Information" -> Shows General Information
+       - [ ] Tap 7 times on "General Information" -> Developer options shown
+       -------
+    validations:
+      required: false
   - type: textarea
     id: nav_jse
     attributes:
-      label: hold
-      description: hold
+      label: Navigation (JSE)
+      description: Add / Remove / Edit tests only if you're sure of what you're doing 
       value: |
-       - [ ] DUMMY
+       - [ ] UI items seen -> My location arrow, Map, POIs, Search bar, Tag filter, floor, FMC (configurable) 
+       - [ ] Drag / Pinch(zoom)/ Choose floor bar to see other map areas  
+       - [ ] Tap on POI -> Suggest navigation to SO
+       - [ ] Long tap on any location -> Suggest navigation to selected cooridnate
+       - [ ] Long tap on My location arrow -> Suggests only self location sharing
+       - [ ] Select a filter tag -> Shows results related to SO type
+       - [ ] Type on the search box -> Shows results according to text (by SO name and description)
+       - [ ] Select an SO from different floow to open the navigation preview -> See different floor in preview
+       - [ ] UI items seen -> SO name / logo / type / floor, navigation types, back button, share button, navigate
+       - [ ] Choose different navigation modes -> preview changes accordingly (elevator vs stairs)
+       - [ ] Start navigation, see the following AR items -> 2d helpers, 3d arrows, 3d elevator/escalator bubble, warning modal, destination red 3d pin
+       - [ ] 2d map in the bottom -> expands and closes w/ animation accoding to device tilting down
+       - [ ] Arrived at destination bottom message (back to map / details buttons)
+       - [ ] Save car in parking lot -> get danger-zone + Parking navigation (compass only UI)
+
        -------
     validations:
-      required: true
+      required: false
   - type: textarea
     id: deeplink_jse
     attributes:
@@ -61,34 +108,68 @@ body:
        - [ ] Illegal deeplink due to a bad shop/syntax
        -------
     validations:
-      required: true
+      required: false
   - type: textarea
     id: pinata_jse
     attributes:
       label: Pinata JSE
-      description: hold
+      description: Add / Remove / Edit tests only if you're sure of what you're doing 
       value: |
-       - [ ] DUMMY
+       - [ ] Locate a Pinata through JTD in your env, check configs -> RequiredHits, PromotionText, CouponId
+       - [ ] See the model looks good with action hint
+       - [ ] Tapping on Pinata triggers bat / Pinata ARX
+       - [ ] Tapping on either the pinata or the bat has the "hit animation" -> Sound, Vibrate, Swing, Confetti
+       - [ ] The pinata morphs as you hit it until destroyed (special animation with more Confetti)
+       - [ ] Get a toast / message with the couponID
+       - [ ] Pinata re-appears when starting new session (kill app)
+       - [ ] Coupon appears in My Coupons ARX with chosen Name, promotion text and logo
+       - [ ] Tapping on "Use coupon" shows the same toast / message with the couponID
+
        -------
     validations:
-      required: true
+      required: false
+  - type: textarea
+    id: art_canvas
+    attributes:
+      label: Art / Canvas JSE
+      description: Add / Remove / Edit tests only if you're sure of what you're doing 
+      value: |
+       - [ ] In Azrieli env - See main art piece with existing model in the center of the mall (with color, light and it moves)
+       - [ ] Look for canvas with link in JTD. When seeing it in env - Tap on canvas to open canvas' hyperlink 
+       -------
+    validations:
+      required: false
   - type: textarea
     id: concierge_unity
     attributes:
-      label: hold
-      description: hold
+      label: Concierge ARX (Unity)
+      description: Add / Remove / Edit tests only if you're sure of what you're doing 
       value: |
-       - [ ] DUMMY
+       - [ ] UI items seen -> My location arrow, Map, POIs, Search bar, Tag filter, floor, FMC (configurable) 
+       - [ ] Drag / Pinch(zoom)/ Choose floor bar to see other map areas  
+       - [ ] Tap on POI -> Suggest navigation to SO
+       - [ ] Long tap on any location -> Suggest navigation to selected cooridnate
+       - [ ] Long tap on My location arrow -> Suggests only self location sharing
+       - [ ] Select a filter tag -> Shows results related to SO type
+       - [ ] Type on the search box -> Shows results according to text (by SO name and description)
+       - [ ] Select an SO from different floow to open the navigation preview -> See different floor in preview
+       - [ ] UI items seen -> SO name / logo / type / floor, navigation types, back button, share button, navigate
+       - [ ] Choose different navigation modes -> preview changes accordingly (elevator vs stairs)
+       - [ ] Start navigation, see the following AR items -> 2d helpers, 3d arrows, 3d elevator/escalator bubble, warning modal, destination red 3d pin
+       - [ ] 2d map in the bottom -> expands and closes w/ animation accoding to device tilting down
+       - [ ] Arrived at destination bottom message (back to map / details buttons)
+       - [ ] Save car in parking lot -> get danger-zone + Parking navigation (compass only UI)
+
        -------
     validations:
-      required: true
+      required: false
   - type: textarea
     id: iot_unity
     attributes:
-      label: hold
-      description: hold
+      label: IOT ARX (Unity)
+      description: Add / Remove / Edit tests only if you're sure of what you're doing 
       value: |
-       - [ ] DUMMY
+       - [ ] Confirm it's possible to turn the lights at the office on / off (not all lights are connected to iot)
        -------
     validations:
-      required: true
+      required: false
