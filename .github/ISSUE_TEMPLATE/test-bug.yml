@@ -1,57 +1,95 @@
-name: Issue Template - 🤳 Native App
-description: File a bug report for Native App
-title: "<ENTER ISSUE TITLE>"
-labels: ["bug","🤳 Native App"]
+name: Regression Template  - FE / Native
+description: Test Plan for FE / Native regression
+title: "FE/Native Regression: <Enter Version>"
 body:
   - type: markdown
     attributes:
       value: |
-        Manually add "🤳 Native App" on Projects -->
+       ##### ENTER TITLE AND PROJECT ONLY #####
+       the rest of the template should 
 
-        [### Check this is NOT a DUPLICATE ###](https://github.com/orgs/resonai/projects/4)
-        
-        Please fill the fields below accordingly
+       Add /Remove / Edit tests before opening the test plan only if you're certain they are not relevant anymore.
+
   - type: textarea
-    id: description
+    id: MMS
     attributes:
-      label: Bug description
-      description: A description of what happened, how to reproduce, how it affects usage
+      label: MMS tests
+      description: Tests required that relate to MMS functionality
       value: |
-        [Issue details and effects]:
-
-        [How to Reproduce]:
-        1.
-        2.
-        3.
-        ...
-
-        [Screenshot / Recording]:
-        (Drag & drop media in OR enter link)
+       - [ ] Open the (MMS dashboard from the office WIFI)[https://mms.optmoskva.ru/#/admin/dashboard?taskTypeFilter=all]
+       - [ ] Insert the following ID card `U-000489724`
+       - [ ] Delete current owner and yours to display new QR code
+       - [ ] Open app with TCM and scan QR code 
+       - [ ] Follow either open/close flows until the end
+       - [ ] Rinse and repeat on another OS (Android / iOS)
+       -------
     validations:
       required: true
-  - type: dropdown
-    id: env
-    attributes:
-      label: Operating system
-      description: OS where the issues was experienced on
-      multiple: true
-      options:
-        - Android
-        - iOS
-    validations:
-      required: true
-  - type: input
-    id: crashlytics
-    attributes:
-      label: Crashlytics / crash report
-      description: Link to the report
-    validations:
-      required: false
   - type: textarea
-    id: settings
+    id: tutorial
     attributes:
-      label: Settings screenshot
-      description: Show System Information under Vera settings 
-      placeholder: Drag file here or add screenshot link
+      label: hold
+      description: hold
+      value: |
+       - [ ] DUMMY
+       -------
+    validations:
+      required: true
+  - type: textarea
+    id: nav_jse
+    attributes:
+      label: hold
+      description: hold
+      value: |
+       - [ ] DUMMY
+       -------
+    validations:
+      required: true
+  - type: textarea
+    id: deeplink_jse
+    attributes:
+      label: Deeplink tests
+      description: Tests required that relate to deeplinks for this release
+      value: |
+       - [ ] Deeplink to a store in a fresh session
+       - [ ] Deeplink to FMC in a fresh session
+       - [ ] Deeplink to a coordinate in a fresh session
+       - [ ] Deeplink to a store while a session is active
+       - [ ] Deeplink to FMC while a session is active
+       - [ ] Deeplink to a coordinate while a session is active
+       - [ ] Illegal deeplink due to bad site
+       - [ ] Illegal deeplink due to an ARX that's not available for the current user (in the current group)
+       - [ ] Illegal deeplink due to a bad shop/syntax
+       -------
+    validations:
+      required: true
+  - type: textarea
+    id: pinata_jse
+    attributes:
+      label: Pinata JSE
+      description: hold
+      value: |
+       - [ ] DUMMY
+       -------
+    validations:
+      required: true
+  - type: textarea
+    id: concierge_unity
+    attributes:
+      label: hold
+      description: hold
+      value: |
+       - [ ] DUMMY
+       -------
+    validations:
+      required: true
+  - type: textarea
+    id: concierge_unity
+    attributes:
+      label: hold
+      description: hold
+      value: |
+       - [ ] DUMMY
+       -------
     validations:
       required: true
